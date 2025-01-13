@@ -10,14 +10,23 @@ public class Movimiento2D : MonoBehaviour
 
     }
 
-
+    float horizontal;
+    float vertical;
     public float speed;
+    public bool jugadorA;
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-
-        float vertical = Input.GetAxis("Vertical");
+        if (jugadorA)
+        {
+            horizontal = Input.GetAxis("HorizontalA");
+            vertical = Input.GetAxis("VerticalA");
+        }
+        else {
+            horizontal = Input.GetAxis("HorizontalB");
+            vertical = Input.GetAxis("VerticalB");
+        }
+        
 
         Vector3 direccion = new Vector3(horizontal, vertical);
 
