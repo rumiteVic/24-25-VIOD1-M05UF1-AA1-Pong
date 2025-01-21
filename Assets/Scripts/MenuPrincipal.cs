@@ -14,6 +14,7 @@ public class MenuPrincipal : MonoBehaviour
     public void UnJugador()
     {
         Debug.Log("Un Jugador");
+        SceneManager.LoadScene("UnJugador");
     }
 
     public void Salir()
