@@ -19,22 +19,18 @@ public class LimiteMovimiento : MonoBehaviour
     {
         if (transform.position.y > yMax)
         {
-            Debug.Log("Me he pasado Y+");
             transform.position = new Vector3(transform.position.x, yMax);
         }
         if (transform.position.y < yMin)
         {
-            Debug.Log("Me he pasado Y-");
             transform.position = new Vector3(transform.position.x, yMin);
         }
         if (transform.position.x > xMax)
         {
-            Debug.Log("Me he pasado X+");
             transform.position = new Vector3(xMax, transform.position.y);
         }
         if (transform.position.x < xMin)
         {
-            Debug.Log("Me he pasadoX-");
             transform.position = new Vector3(xMin, transform.position.y);
         }
     }
